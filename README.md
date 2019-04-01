@@ -26,7 +26,7 @@ compare bounding box size in sequential images
  
 ### Result (4.11 ~ 4.13)
  
-### Paper writing (4.16 ~ 4.1O)
+### Paper writing (4.16 ~ 4.10)
 overleaf online latex using AAAI author toolkit
  
 ### Detailed implementation
