@@ -19,12 +19,15 @@ Neural Network |NN Link| Dataset| Link|
 --- | --- | ---|---|
  |  |  | |
  
- ### NN implementations (4.3 ~ 4.6)
+### NN implementations (4.3 ~ 4.6)
  
- ### Moving direction determination (4.7 ~ 4.10)
- compare bounding box size in sequential images
+### Moving direction determination (4.7 ~ 4.10)
+compare bounding box size in sequential images
  
- ### Result (4.11 ~ 4.13)
+### Result (4.11 ~ 4.13)
  
- ### Paper writing (4.16 ~ 4.1O)
- overleaf online latex using AAAI author toolkit
+### Paper writing (4.16 ~ 4.1O)
+overleaf online latex using AAAI author toolkit
+ 
+### Detailed implementation
+
