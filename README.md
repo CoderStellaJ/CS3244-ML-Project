@@ -19,7 +19,8 @@ Blind people voice guide app
 ### Research on dataset and neural network (4.1 ~ 4.2)
 Neural Network |NN Link| Description | Paper
 --- | --- | ---| --- |
-YOLOv3 |https://pjreddie.com/darknet/yolo/ | YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | --- |
+YOLOv3 |https://pjreddie.com/darknet/yolo/ |Developed from YOLO |  |
+YOLO | | YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet.|https://pjreddie.com/media/files/papers/yolo.pdf |
 R-CNN  | | | | https://arxiv.org/pdf/1311.2524.pdf |
 
 ![github-small](https://github.com/CoderStellaJ/CS3244-ML-Project/blob/master/Baselines.PNG)
@@ -36,7 +37,7 @@ compare bounding box size in sequential images
  
 ### Result (4.11 ~ 4.13)
  
-### Paper writing (4.16 ~ 4.10)
+### Paper writing (4.16 ~ 4.17)
 overleaf online latex using AAAI author toolkit
  
 ### Detailed implementation
