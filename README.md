@@ -17,9 +17,12 @@ Blind people voice guide app
   
   
 ### Research on dataset and neural network (4.1 ~ 4.2)
-Neural Network |NN Link| Description |
---- | --- | ---|
-YOLOv3 |https://pjreddie.com/darknet/yolo/ | YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | 
+Neural Network |NN Link| Description | Paper
+--- | --- | ---| --- |
+YOLOv3 |https://pjreddie.com/darknet/yolo/ | YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | --- |
+R-CNN  | | | | https://arxiv.org/pdf/1311.2524.pdf |
+
+![alt text](http://url/to/img.png)
 
 Dataset| Link| Description |
 ---|---|---|
