@@ -22,7 +22,7 @@ Neural Network |NN Link| Description | Paper
 YOLOv3 |https://pjreddie.com/darknet/yolo/ | YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | --- |
 R-CNN  | | | | https://arxiv.org/pdf/1311.2524.pdf |
 
-![alt text](http://url/to/img.png)
+![github-small](https://github.com/CoderStellaJ/CS3244-ML-Project/blob/master/Baselines.PNG)
 
 Dataset| Link| Description |
 ---|---|---|
