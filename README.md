@@ -8,7 +8,7 @@ Blind people voice guide app
   <br/>location is shared to family to ensure blind people's safety in case of emergency.
 - Camera based image capturing 
   <br/>capture real-time view in front of the user.
-- Object detection
+- Object detection and classification
   <br/>focus on human object
 - Moving direction determination
   <br/>based on bounding box size in sequencial images to determine whether the peron is moving to/away from the user.
@@ -17,10 +17,15 @@ Blind people voice guide app
   
   
 ### Research on dataset and neural network (4.1 ~ 4.2)
-Neural Network |NN Link| Dataset| Link|
---- | --- | ---|---|
- |  |  | |
- 
+Neural Network |NN Link| Description |
+--- | --- | ---|
+YOLOv3 |https://pjreddie.com/darknet/yolo/ | YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | 
+
+Dataset| Link| Description |
+---|---|---|
+ImageNet | http://www.image-net.org/ |  |
+COCO dataset|http://cocodataset.org/#home ||
+Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
 ### NN implementations (4.3 ~ 4.6)
  
 ### Moving direction determination (4.7 ~ 4.10)
