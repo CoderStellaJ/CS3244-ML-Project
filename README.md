@@ -56,12 +56,14 @@ The README.md page of [yolov3](https://github.com/ultralytics/yolov3) has instru
 python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 ```
 
-### NN implementations (4.3 ~ 4.6)
- 
 ### Moving direction determination (4.7 ~ 4.10)
 compare bounding box size in sequential images
+
+### Transform detection and direction to voice (4.11 ~ 4.12)
+Google text-to-voice API
+https://towardsdatascience.com/object-detection-with-voice-feedback-yolo-v3-gtts-6ec732dca91
  
-### Result (4.11 ~ 4.13)
+### Result (4.12 ~ 4.13)
  
 ### Paper writing (4.16 ~ 4.17)
 overleaf online latex using AAAI author toolkit
