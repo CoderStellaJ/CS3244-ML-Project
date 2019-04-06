@@ -33,30 +33,27 @@ Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
 
 ### 3. Detailed instructions for setting up YOLOv3
 
-The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C language on Linux OS. For our convenience, a simplified [pytorch version](https://github.com/eriklindernoren/PyTorch-YOLOv3) is used for this project.
+The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C language on Linux OS. For our convenience, a simplified [pytorch version](https://github.com/ultralytics/yolov3) is used for this project.
 
-The README.md page of [Pytorch-YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3) has instructions for downloading and setting up. But due to difference in OS, the following is details for Windows OS setting up. You can also record down your process of setting up for MacOS.
+The README.md page of [yolov3](https://github.com/ultralytics/yolov3) has instructions for downloading and setting up. But due to difference in OS, the following is details for setting up on your Windows/MacOS.
 
-#### For Windows
 - Make sure your laptop has Python installed. Anaconda is recommended for installing Python as it helps to install various dependencies.
 - Run the following commands using Git Bash
 ```
-    $ git clone https://github.com/eriklindernoren/PyTorch-YOLOv3
-    $ cd PyTorch-YOLOv3/
-    $ pip3 install -r requirements.txt
+    $ git clone https://github.com/ultralytics/yolov3.git
 ```
 - Download pretrained weights
-<br/>First, make sure your laptop has wget, download at https://eternallybored.org/misc/wget/. I chose 1.19.1 .zip version because this contains windows certificate. Also remember to add the path of wget.exe to environment path setting. 
-<br/> Then run commands to download weights from websites, this process takes about 10 mins.
-```
-$ cd weights/
-$ bash download_weights.sh
-```
+<br/> The pretrained weights can be downloaded [here](https://pjreddie.com/media/files/yolov3.weights) which is trained on COCO dataset
+<br/> Then, copy the weights into .\yolov3\weights
+
 - Obtain COCO dataset
-As it's not practical to download the whole set of data on our own laptop, we can just dowload a part of it. Run the following commands, for the second command, after running some time, you can press Ctrl+C to interrupt it.
+<br/> Due to space constraints of our laptop, for testing, we currently don't need to download the whole dataset
+<br/> Currently, there is only 1 image in .\yolov3\data\samples. If you want to test more images, can put them into samples folder
+
+- Run simple tests
+<br/> Please refer to Inference section in [README.md](https://github.com/ultralytics/yolov3)
 ```
-$ cd data/
-$ bash get_coco_dataset.sh
+python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 ```
 
 ### NN implementations (4.3 ~ 4.6)
