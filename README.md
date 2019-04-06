@@ -53,6 +53,7 @@ $ cd weights/
 $ bash download_weights.sh
 ```
 - Obtain COCO dataset
+As it's not practical to download the whole set of data on our own laptop, we can just dowload a part of it. Run the following commands, for the second command, after running some time, you can press Ctrl+C to interrupt it.
 ```
 $ cd data/
 $ bash get_coco_dataset.sh
