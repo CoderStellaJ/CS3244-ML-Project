@@ -16,7 +16,8 @@ Blind people voice guide app
   <br/>based on object classification and moving direction, output audio guide (a person is moving to you/ a person is moving away from you)
   
   
-### Research on dataset and neural network (4.1 ~ 4.2)
+### Research on dataset and [neural network](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e) (4.1 ~ 4.2)
+
 Neural Network |NN Link| Description | Paper
 --- | --- | ---| --- |
 YOLOv3 |https://pjreddie.com/darknet/yolo/ |YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | https://pjreddie.com/media/files/papers/yolo.pdf |
