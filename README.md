@@ -3,7 +3,7 @@ Blind people voice guide app
 <br/>Created by National University of Singapore CS3244 Machine Learning Group 25 and 26. All of us are equally contributed.
 <br/>[Jin Shuyuan](https://github.com/CoderStellaJ), [Mou Ziyang](https://github.com/mouziyanglovestudy), [Tian Xin](https://github.com/tianxin9628), [Tian Xueyan](https://github.com/xueyantian), [Wang Tengda](https://github.com/JacobWangTengda), [Zhao Tianze](https://github.com/tankztz)
 
-### App features
+### 1. App features
 - GPS location share 
   <br/>location is shared to family to ensure blind people's safety in case of emergency.
 - Camera based image capturing 
@@ -16,7 +16,7 @@ Blind people voice guide app
   <br/>based on object classification and moving direction, output audio guide (a person is moving to you/ a person is moving away from you)
   
   
-### Research on dataset and [neural network](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e) (4.1 ~ 4.2)
+### 2. Research on dataset and [neural network](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e) (4.1 ~ 4.2)
 
 Neural Network |NN Link| Description | Paper
 --- | --- | ---| --- |
@@ -30,6 +30,34 @@ Dataset| Link| Description |
 ImageNet | http://www.image-net.org/ |  |
 COCO dataset|http://cocodataset.org/#home ||
 Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
+
+### 3. Detailed instructions for setting up YOLOv3
+
+The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C language on Linux OS. For our convenience, a simplified [pytorch version](https://github.com/eriklindernoren/PyTorch-YOLOv3) is used for this project.
+
+The README.md page of [Pytorch-YOLOv3](https://github.com/eriklindernoren/PyTorch-YOLOv3) has instructions for downloading and setting up. But due to difference in OS, the following is details for Windows OS setting up. You can also record down your process of setting up for MacOS.
+
+#### For Windows
+- Make sure your laptop has Python installed. Anaconda is recommended for installing Python as it helps to install various dependencies.
+- Run the following commands using Git Bash
+```
+    $ git clone https://github.com/eriklindernoren/PyTorch-YOLOv3
+    $ cd PyTorch-YOLOv3/
+    $ pip3 install -r requirements.txt
+```
+- Download pretrained weights
+<br/>First, make sure your laptop has wget, download at https://eternallybored.org/misc/wget/. I chose 1.19.1 .zip version because this contains windows certificate. Also remember to add the path of wget.exe to environment path setting. 
+<br/> Then run commands to download weights from websites, this process takes about 10 mins.
+```
+$ cd weights/
+$ bash download_weights.sh
+```
+- Obtain COCO dataset
+```
+$ cd data/
+$ bash get_coco_dataset.sh
+```
+
 ### NN implementations (4.3 ~ 4.6)
  
 ### Moving direction determination (4.7 ~ 4.10)
