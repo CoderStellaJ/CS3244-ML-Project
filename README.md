@@ -31,7 +31,7 @@ ImageNet | http://www.image-net.org/ |  |
 COCO dataset|http://cocodataset.org/#home ||
 Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
 
-### 3. Detailed instructions for setting up YOLOv3
+### 3. Detailed instructions for setting up YOLOv3(4.3 ~ 4.6)
 
 The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C language on Linux OS. For our convenience, a simplified [pytorch version](https://github.com/ultralytics/yolov3) is used for this project.
 
