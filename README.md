@@ -39,7 +39,7 @@ The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C
 - Run the following commands using Git Bash
 ```
     $ git clone https://github.com/CoderStellaJ/CS3244-ML-Project.git
-    $ cd CoderStellaJ/
+    $ cd CS3244-ML-Project/
 ```
 - Download pretrained weights
 <br/> The pretrained weights can be downloaded [here](https://pjreddie.com/media/files/yolov3.weights) which is trained on COCO dataset
