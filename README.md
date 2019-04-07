@@ -48,7 +48,7 @@ The README.md page of [yolov3](https://github.com/ultralytics/yolov3) has instru
 
 - Obtain COCO dataset
 <br/> Due to space constraints of our laptop, for testing, we currently don't need to download the whole dataset
-<br/> Currently, there is only 1 image in .\yolov3\data\samples. If you want to test more images, can put them into samples folder
+<br/> Currently, there is only 1 image in ```.\yolov3\data\samples```. If you want to test more images, can put them into samples folder
 
 - Run simple tests
 <br/> Please refer to Inference section in [README.md](https://github.com/ultralytics/yolov3)
