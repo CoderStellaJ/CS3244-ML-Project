@@ -67,6 +67,11 @@ python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 For simplicity and purpose of the app, we only focus on person type objects
 - ```detect.py```line 80 ```if int(cls) == 0:``` helps us to only mark person bounding box in output images.
 
+#### Choose main object
+In real conditions, there may be multiple people in front of the user, we need to compare bounding boxes size to determine which person is closer to user and take it as the main object.
+
+#### Determine main object moving direction
+
 ### Transform detection and direction to voice (4.11 ~ 4.12)
 Google text-to-voice API
 https://towardsdatascience.com/object-detection-with-voice-feedback-yolo-v3-gtts-6ec732dca91
