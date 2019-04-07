@@ -57,7 +57,12 @@ python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 ```
 
 ### Moving direction determination (4.7 ~ 4.10)
-compare bounding box size in sequential images
+#### Output .txt files for bounding box and label
+- Modify ```detect.py```, line 19, change ```save_txt = False``` to ```save_txt = True```. This will save .txt files in ```Output``` folder
+#### Understand .txt file structure
+- Each line contains 6 numbers. The first 4 numbers are bounding box coordinates. The 5th number is the category of the object. And the last number is confidence of the category
+- ```.\yolov3\data\coco.names``` specifies possible categories. The (5th number + 1) line is the corresponding type.
+- 
 
 ### Transform detection and direction to voice (4.11 ~ 4.12)
 Google text-to-voice API
