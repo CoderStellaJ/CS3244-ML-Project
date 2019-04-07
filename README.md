@@ -55,7 +55,7 @@ The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C
 python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 ```
 
-### Moving direction determination (4.7 ~ 4.10)
+### 4. Moving direction determination (4.7 ~ 4.10)
 #### Output .txt files for bounding box and label
 - Line 19 of ```detect.py``` ```save_txt = True```. This will save .txt files in ```Output``` folder
 
