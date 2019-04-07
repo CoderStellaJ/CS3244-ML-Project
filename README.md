@@ -62,7 +62,8 @@ python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 #### Understand .txt file structure
 - Each line contains 6 numbers. The first 4 numbers are bounding box coordinates. The 5th number is the category of the object. And the last number is confidence of the category
 - ```.\yolov3\data\coco.names``` specifies possible categories. The (5th number + 1) line is the corresponding type.
-- 
+#### Filter out other categories except person
+- Insert ```if int(cls) == 0:``` at line 80 of ```detect.py``` 
 
 ### Transform detection and direction to voice (4.11 ~ 4.12)
 Google text-to-voice API
