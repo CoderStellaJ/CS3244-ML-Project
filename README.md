@@ -33,22 +33,21 @@ Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
 
 ### 3. Detailed instructions for setting up YOLOv3(4.3 ~ 4.6)
 
-The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C language on Linux OS. For our convenience, a simplified [pytorch version](https://github.com/ultralytics/yolov3) is used for this project.
-
-The README.md page of [yolov3](https://github.com/ultralytics/yolov3) has instructions for downloading and setting up. But due to difference in OS, the following is details for setting up on your Windows/MacOS.
+The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C language on Linux OS. For our convenience, a simplified [pytorch version](https://github.com/ultralytics/yolov3) is used for this project. And some useful parts of the code has been copied and uploaded in this repository.
 
 - Make sure your laptop has Python installed. Anaconda is recommended for installing Python as it helps to install various dependencies.
 - Run the following commands using Git Bash
 ```
-    $ git clone https://github.com/ultralytics/yolov3.git
+    $ git clone https://github.com/CoderStellaJ/CS3244-ML-Project.git
+    $ cd CoderStellaJ/
 ```
 - Download pretrained weights
 <br/> The pretrained weights can be downloaded [here](https://pjreddie.com/media/files/yolov3.weights) which is trained on COCO dataset
-<br/> Then, copy the weights into ```.\yolov3\weights```
+<br/> Then, copy the weights into ```.\weights```
 
 - Obtain COCO dataset
 <br/> Due to space constraints of our laptop, for testing, we currently don't need to download the whole dataset
-<br/> Currently, there is only 1 image in ```.\yolov3\data\samples```. If you want to test more images, can put them into samples folder
+<br/> Currently, there are limited images in ```.\data\samples```. If you want to test more images, can put them into samples folder
 
 - Run simple tests
 <br/> Please refer to Inference section in [README.md](https://github.com/ultralytics/yolov3)
@@ -58,11 +57,15 @@ python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 
 ### Moving direction determination (4.7 ~ 4.10)
 #### Output .txt files for bounding box and label
-- Modify ```detect.py```, line 19, change ```save_txt = False``` to ```save_txt = True```. This will save .txt files in ```Output``` folder
+- Line 19 of ```detect.py``` ```save_txt = True```. This will save .txt files in ```Output``` folder
+
 #### Understand .txt file structure
 - Each line contains 6 numbers. The first 4 numbers are bounding box coordinates. The 5th number is the category of the object. And the last number is confidence of the category
-- ```.\yolov3\data\coco.names``` specifies possible categories. The (5th number + 1) line is the corresponding type.
-- 
+- ```.\data\coco.names``` specifies possible categories. The (5th number + 1) line is the corresponding type.
+
+#### Focus on person type objects
+For simplicity and purpose of the app, we only focus on person type objects
+- ```detect.py```line 80 ```if int(cls) == 0:``` helps us to only mark person bounding box in output images.
 
 ### Transform detection and direction to voice (4.11 ~ 4.12)
 Google text-to-voice API
