@@ -44,7 +44,7 @@ The README.md page of [yolov3](https://github.com/ultralytics/yolov3) has instru
 ```
 - Download pretrained weights
 <br/> The pretrained weights can be downloaded [here](https://pjreddie.com/media/files/yolov3.weights) which is trained on COCO dataset
-<br/> Then, copy the weights into .\yolov3\weights
+<br/> Then, copy the weights into ```.\yolov3\weights```
 
 - Obtain COCO dataset
 <br/> Due to space constraints of our laptop, for testing, we currently don't need to download the whole dataset
