@@ -92,5 +92,5 @@ Each bounding box consists of 5 predictions: x, y, w, h, and confidence. The (x,
 Assignment|People|
 ---|---|
 Research on other papers & Run rough experiments & Compare its disadvantages over YOLOv3| Wang Tengda, Mou Ziyang, Tian Xin|
-YOLOv3 detailed structure & techincal details | Tian Xueyan|
-Bounding box comparison & Output video with voice | |
+YOLOv3 detailed structure & techincal details | Tian Xueyan, Jin Shuyuan|
+Bounding box comparison & Output video with voice |Zhao Tianze |
