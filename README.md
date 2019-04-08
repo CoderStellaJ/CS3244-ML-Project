@@ -82,3 +82,7 @@ https://towardsdatascience.com/object-detection-with-voice-feedback-yolo-v3-gtts
 overleaf online latex using AAAI author toolkit
  
 ### Detailed implementation
+
+
+### Bouding Box
+Each bounding box consists of 5 predictions: x, y, w, h, and confidence. The (x, y) coordinates represent the center of the box relative to the bounds of the grid cell. The width and height are predicted relative to the whole image.  Finally the confidence prediction represents the IOU between the predicted box and any ground truth box.
