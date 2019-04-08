@@ -72,6 +72,8 @@ In real conditions, there may be multiple people in front of the user, we need t
 
 #### Determine main object moving direction
 
+### 5. Detailed implementation
+
 ### Transform detection and direction to voice (4.11 ~ 4.12)
 Google text-to-voice API
 https://towardsdatascience.com/object-detection-with-voice-feedback-yolo-v3-gtts-6ec732dca91
@@ -81,7 +83,7 @@ https://towardsdatascience.com/object-detection-with-voice-feedback-yolo-v3-gtts
 ### Paper writing (4.16 ~ 4.17)
 overleaf online latex using AAAI author toolkit
  
-### Detailed implementation
+
 
 
 ### Bouding Box
