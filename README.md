@@ -14,24 +14,8 @@ Blind people voice guide app
   <br/>based on bounding box size in sequencial images to determine whether the peron is moving to/away from the user.
 - Voice Guide
   <br/>based on object classification and moving direction, output audio guide (a person is moving to you/ a person is moving away from you)
-  
-  
-### 2. Research on dataset and [neural network](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e) (4.1 ~ 4.2)
 
-Neural Network |NN Link| Description | Paper
---- | --- | ---| --- |
-YOLOv3 |https://pjreddie.com/darknet/yolo/    https://github.com/AlexeyAB/darknet  (for both windows and linux) |YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | https://pjreddie.com/media/files/papers/yolo.pdf |
-Faster R-CNN  |https://github.com/ShaoqingRen/faster_rcnn| |https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf | 
-
-![github-small](https://github.com/CoderStellaJ/CS3244-ML-Project/blob/master/Baselines.PNG)
-
-Dataset| Link| Description |
----|---|---|
-ImageNet | http://www.image-net.org/ |  |
-COCO dataset|http://cocodataset.org/#home ||
-Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
-
-### 3. Detailed instructions for setting up YOLOv3(4.3 ~ 4.6)
+### 2. Detailed instructions for setting up YOLOv3(4.3 ~ 4.6)
 
 The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C language on Linux OS. For our convenience, a simplified [pytorch version](https://github.com/ultralytics/yolov3) is used for this project. And some useful parts of the code has been copied and uploaded in this repository.
 
@@ -55,7 +39,7 @@ The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C
 python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
 ```
 
-### 4. Moving direction determination (4.7 ~ 4.10)
+### 3. Moving direction determination and voice guide (4.7 ~ 4.13)
 #### Output .txt files for bounding box and label
 - Line 19 of ```detect.py``` ```save_txt = True```. This will save .txt files in ```Output``` folder
 
@@ -70,14 +54,29 @@ For simplicity and purpose of the app, we only focus on person type objects
 #### Choose main object
 In real conditions, there may be multiple people in front of the user, we need to compare bounding boxes size to determine which person is closer to user and take it as the main object.
 
-#### Determine main object moving direction
+#### Determine main object moving direction (4.8 ~ 4.10)
 
-### 5. Detailed implementation
-
-### Transform detection and direction to voice (4.11 ~ 4.12)
+#### Transform detection and direction to voice (4.11 ~ 4.12)
 Google text-to-voice API
 https://towardsdatascience.com/object-detection-with-voice-feedback-yolo-v3-gtts-6ec732dca91
+
+### 4. YOLOv3 detailed implementation (4.9 ~ 4.13)
+
  
+### 5. Research on dataset and [neural network](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e) (4.1 ~ 4.2 & 4.9 ~ 4.13)
+
+Neural Network |NN Link| Description | Paper
+--- | --- | ---| --- |
+YOLOv3 |https://pjreddie.com/darknet/yolo/    https://github.com/AlexeyAB/darknet  (for both windows and linux) |YOLO is a state-of-the-art, real-time object detection system. It has Pretrained Convolutional Weights which is tarined on Imagenet. | https://pjreddie.com/media/files/papers/yolo.pdf |
+Faster R-CNN  |https://github.com/ShaoqingRen/faster_rcnn| |https://papers.nips.cc/paper/5638-faster-r-cnn-towards-real-time-object-detection-with-region-proposal-networks.pdf | 
+
+![github-small](https://github.com/CoderStellaJ/CS3244-ML-Project/blob/master/Baselines.PNG)
+
+Dataset| Link| Description |
+---|---|---|
+ImageNet | http://www.image-net.org/ |  |
+COCO dataset|http://cocodataset.org/#home ||
+Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
 ### Result (4.12 ~ 4.13)
  
 ### Paper writing (4.16 ~ 4.17)
