@@ -92,4 +92,4 @@ Assignment|People|
 ---|---|
 Research on other papers & Run rough experiments & Compare its disadvantages over YOLOv3| Wang Tengda|
 YOLOv3 detailed structure & techincal details | Tian Xueyan|
-Bounding box comparison & Output | |
+Bounding box comparison & Output video with voice | |
