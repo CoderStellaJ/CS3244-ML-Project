@@ -6,6 +6,14 @@ from models import *
 from utils.datasets import *
 from utils.utils import *
 
+def checkStatus(l1, l2, k1, k2):
+    if (len(l1) == 0):
+        return 0
+    if k1 > l1[0]:
+        return 1
+    if k2 > l2[0]:
+        return 1
+    return 0
 
 def detect(
         cfg,
@@ -48,7 +56,13 @@ def detect(
     classes = load_classes(parse_data_cfg(data_cfg)['names'])
     colors = [[random.randint(0, 255) for _ in range(3)] for _ in range(len(classes))]
 
+    recore_w = []
+    record_l = []
+
     for i, (path, img, im0, vid_cap) in enumerate(dataloader):
+        max_w_local = -1
+        max_l_local = -1
+
         t = time.time()
         save_path = str(Path(output) / Path(path).name)
 
@@ -73,12 +87,24 @@ def detect(
             for *xyxy, conf, cls_conf, cls in detections:
                 if save_txt:  # Write to file
                     with open(save_path + '.txt', 'a') as file:
-                        file.write(('%g ' * 6 + '\n') % (*xyxy, cls, conf))
+                        file.write(('%g ' * 6 + '\n') % (xyxy[0], xyxy[1], xyxy[2], xyxy[3], cls, conf))
+
+                # Check largest
+                if int(cls) == 0:
+                    if xyxy[2] > max_w_local:
+                        max_w_local = xyxy[2]
+                    if xyxy[3] > max_l_local:
+                        max_l_local = xyxy[3]
 
                 # Add bbox to the image
                 label = '%s %.2f' % (classes[int(cls)], conf)
                 if int(cls) == 0:
                     plot_one_box(xyxy, im0, label=label, color=colors[int(cls)])
+        
+        if (checkStatus(recore_w, record_l, max_w_local, max_l_local) == 1):
+            print('Approaching person warning! ')
+        recore_w.insert(0, max_w_local)
+        record_l.insert(0, max_l_local)
 
         print('Done. (%.3fs)' % (time.time() - t))
 
