@@ -6,14 +6,16 @@ from models import *
 from utils.datasets import *
 from utils.utils import *
 
-def checkStatus(l1, l2, k1, k2):
-    if (len(l1) == 0):
+
+def check_status(l1, l2, k1, k2):
+    if len(l1) == 0:
         return 0
     if k1 > l1[0]:
         return 1
     if k2 > l2[0]:
         return 1
     return 0
+
 
 def detect(
         cfg,
@@ -100,8 +102,8 @@ def detect(
                 label = '%s %.2f' % (classes[int(cls)], conf)
                 if int(cls) == 0:
                     plot_one_box(xyxy, im0, label=label, color=colors[int(cls)])
-        
-        if (checkStatus(record_w, record_l, max_w_local, max_l_local) == 1):
+
+        if check_status(record_w, record_l, max_w_local, max_l_local) == 1:
             print('Approaching person warning! ')
         record_w.insert(0, max_w_local)
         record_l.insert(0, max_l_local)
