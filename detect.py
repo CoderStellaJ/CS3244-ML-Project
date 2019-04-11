@@ -1,5 +1,6 @@
 import argparse
 import time
+import numpy
 from sys import platform
 
 from models import *
@@ -8,11 +9,11 @@ from utils.utils import *
 
 
 def check_status(l1, l2, k1, k2):
-    if len(l1) == 0:
-        return 0
-    if k1 > l1[0]:
+    if len(l1) < 5: # Not enough data
+        return -1
+    if k1 > numpy.mean(l1[0:4]):
         return 1
-    if k2 > l2[0]:
+    if k2 > numpy.mean(l2[0:4]):
         return 1
     return 0
 
@@ -103,6 +104,7 @@ def detect(
                 if int(cls) == 0:
                     plot_one_box(xyxy, im0, label=label, color=colors[int(cls)])
 
+        # Check the moving status of current image/frame
         if check_status(record_w, record_l, max_w_local, max_l_local) == 1:
             print('Approaching person warning! ')
         record_w.insert(0, max_w_local)
