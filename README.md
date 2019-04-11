@@ -36,7 +36,7 @@ The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C
 - Run simple tests
 <br/> Please refer to Inference section in [README.md](https://github.com/ultralytics/yolov3)
 ```
-python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights
+python detect.py --cfg cfg/yolov3.cfg --weights weights/yolov3.weights --images data/testdata
 ```
 
 ### 3. Moving direction determination and voice guide (4.7 ~ 4.13)

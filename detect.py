@@ -56,7 +56,7 @@ def detect(
     classes = load_classes(parse_data_cfg(data_cfg)['names'])
     colors = [[random.randint(0, 255) for _ in range(3)] for _ in range(len(classes))]
 
-    recore_w = []
+    record_w = []
     record_l = []
 
     for i, (path, img, im0, vid_cap) in enumerate(dataloader):
@@ -101,9 +101,9 @@ def detect(
                 if int(cls) == 0:
                     plot_one_box(xyxy, im0, label=label, color=colors[int(cls)])
         
-        if (checkStatus(recore_w, record_l, max_w_local, max_l_local) == 1):
+        if (checkStatus(record_w, record_l, max_w_local, max_l_local) == 1):
             print('Approaching person warning! ')
-        recore_w.insert(0, max_w_local)
+        record_w.insert(0, max_w_local)
         record_l.insert(0, max_l_local)
 
         print('Done. (%.3fs)' % (time.time() - t))
