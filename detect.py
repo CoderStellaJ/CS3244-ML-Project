@@ -108,7 +108,7 @@ def detect(
         # Check the moving status of current image/frame
         if check_status(record_w, record_l, max_w_local, max_l_local) == 1:
             print('Approaching person warning! ')
-            playsound.playsound('resource/general_warning.mp3', True)
+            playsound.playsound('resource/approaching.mp3', False)
 
         record_w.insert(0, max_w_local)
         record_l.insert(0, max_l_local)
