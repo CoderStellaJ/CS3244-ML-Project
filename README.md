@@ -78,7 +78,7 @@ ImageNet | http://www.image-net.org/ |  |
 COCO dataset|http://cocodataset.org/#home ||
 Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
  
-### 5. Paper writing (4.16 ~ 4.17)
+### 5. Paper writing (4.14 ~ 4.17)
 overleaf online latex editing using AAAI author toolkit
 
 ### 6. Work Allocation
