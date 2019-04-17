@@ -1,5 +1,5 @@
-# CS3244-ML-Project
-Blind people voice guide app
+# Visionary: Voice Guide for Visually Handicapped People  
+### -- CS3244 Team Project
 <br/>Created by National University of Singapore CS3244 Machine Learning Group 25 and 26. All of us are equally contributed.
 <br/>[Jin Shuyuan](https://github.com/CoderStellaJ), [Mou Ziyang](https://github.com/mouziyanglovestudy), [Tian Xin](https://github.com/tianxin9628), [Tian Xueyan](https://github.com/xueyantian), [Wang Tengda](https://github.com/JacobWangTengda), [Zhao Tianze](https://github.com/tankztz)
 
@@ -59,15 +59,11 @@ For simplicity and purpose of the app, we only focus on person type objects
 In real conditions, there may be multiple people in front of the user, we need to compare bounding boxes size to determine which person is closer to user and take it as the main object.
 
 #### Determine main object moving direction (4.8 ~ 4.10)
+Compare the biggest bounding box with the average size of the previous 5 images. If current box size is larger, output audio "Approaching"
 
 #### Transform detection and direction to voice (4.11 ~ 4.12)
-Google text-to-voice API
-https://towardsdatascience.com/object-detection-with-voice-feedback-yolo-v3-gtts-6ec732dca91
 
-### 4. YOLOv3 detailed implementation (4.9 ~ 4.13)
-
- 
-### 5. Research on dataset and [neural network](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e) (4.1 ~ 4.2 & 4.9 ~ 4.13)
+### 4. Research on dataset, [neural network](https://towardsdatascience.com/r-cnn-fast-r-cnn-faster-r-cnn-yolo-object-detection-algorithms-36d53571365e) and methods comparisons(4.1 ~ 4.2 & 4.9 ~ 4.13)
 
 Neural Network |NN Link| Description | Paper
 --- | --- | ---| --- |
@@ -81,18 +77,11 @@ Dataset| Link| Description |
 ImageNet | http://www.image-net.org/ |  |
 COCO dataset|http://cocodataset.org/#home ||
 Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
-### Result (4.12 ~ 4.13)
  
-### Paper writing (4.16 ~ 4.17)
-overleaf online latex using AAAI author toolkit
- 
+### 5. Paper writing (4.16 ~ 4.17)
+overleaf online latex editing using AAAI author toolkit
 
-
-
-### Bouding Box
-Each bounding box consists of 5 predictions: x, y, w, h, and confidence. The (x, y) coordinates represent the center of the box relative to the bounds of the grid cell. The width and height are predicted relative to the whole image.  Finally the confidence prediction represents the IOU between the predicted box and any ground truth box.
-
-### Work Allocation
+### 6. Work Allocation
 Assignment|People|
 ---|---|
 Research on other papers & Run rough experiments & Compare its disadvantages over YOLOv3| Wang Tengda, Mou Ziyang, Tian Xin|
