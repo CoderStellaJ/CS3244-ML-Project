@@ -1,5 +1,5 @@
 # Visionary: Voice Guide for Visually Handicapped People  
-### -- CS3244 Team Project
+<br/>**CS3244 Team Project**
 <br/>Created by National University of Singapore CS3244 Machine Learning Group 25 and 26. All of us are equally contributed.
 <br/>[Jin Shuyuan](https://github.com/CoderStellaJ), [Mou Ziyang](https://github.com/mouziyanglovestudy), [Tian Xin](https://github.com/tianxin9628), [Tian Xueyan](https://github.com/xueyantian), [Wang Tengda](https://github.com/JacobWangTengda), [Zhao Tianze](https://github.com/tankztz)
 
