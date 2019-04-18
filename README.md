@@ -31,7 +31,8 @@ The official [YOLOv3](https://pjreddie.com/darknet/yolo/) is implemented using C
 
 - Obtain COCO dataset
 <br/> Due to space constraints of our laptop, for testing, we currently don't need to download the whole dataset
-<br/> Currently, there are limited images in ```.\data\samples```. If you want to test more images, can put them into samples folder
+<br/> Currently, there are limited images in ```.\data\samples```. If you want to test more images, can put them into samples folder. 
+<br/> Or, line 33 of ```detect.py``` ```webcam = True```. This can activate the webcam to feed real-time webcam images into our model.
 
 - Run simple tests
 <br/> Please refer to Inference section in [README.md](https://github.com/ultralytics/yolov3)
@@ -59,7 +60,7 @@ For simplicity and purpose of the app, we only focus on person type objects
 In real conditions, there may be multiple people in front of the user, we need to compare bounding boxes size to determine which person is closer to user and take it as the main object.
 
 #### Determine main object moving direction (4.8 ~ 4.10)
-Compare the biggest bounding box with the average size of the previous 5 images. If current box size is larger, output audio "Approaching"
+Compare the biggest bounding box with the average width or height of the previous 5 images. If current box size is larger, output audio "Approaching"
 
 #### Transform detection and direction to voice (4.11 ~ 4.12)
 
@@ -80,6 +81,7 @@ Pascal VOC challenge|http://host.robots.ox.ac.uk/pascal/VOC/index.html| |
  
 ### 5. Paper writing (4.14 ~ 4.17)
 overleaf online latex editing using AAAI author toolkit
+<br/> Our TeX source code is [Here](https://github.com/xueyantian/CS3244-Paper)
 
 ### 6. Work Allocation
 Assignment|People|
